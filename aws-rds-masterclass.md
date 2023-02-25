@@ -17,12 +17,14 @@ DBRootPassword=admin123456
 DBUser=ec2dbuser
 ```
 ### Run this new command for database setup;
+```bash
 mysql -u root --password="${DBRootPassword}"
 CREATE DATABASE ec2db;
 CREATE USER ec2dbuser IDENTIFIED BY admin123456;
 CREATE USER 'ec2dbuser' IDENTIFIED BY 'admin123456';
 GRANT ALL PRIVILEGES ON *.* TO 'ec2dbuser'@'%';
 FLUSH PRIVILEGES;
+```
 ### Database Setup on EC2 Instance:
 ```bash
 echo "CREATE DATABASE ${DBName};" >> /tmp/db.setup
