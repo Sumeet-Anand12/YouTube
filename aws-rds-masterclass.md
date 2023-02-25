@@ -11,7 +11,7 @@ yum -y update
 ```
 ### Set Environmental Variables
 ```bash
-DBName=ec2db
+DBName=test
 DBPassword=admin123456
 DBRootPassword=admin123456
 DBUser=ec2dbuser
